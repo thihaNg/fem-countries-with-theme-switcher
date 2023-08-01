@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'NunitoSansRegular';
+  src: url('/public/fonts/NunitoSans-Regular.ttf');
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'NunitoSansMedium';
+  src: url('/public/fonts/NunitoSans-Medium.ttf');
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'NunitoSansBold';
+  src: url('/public/fonts/NunitoSans-Bold.ttf');
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+:root {
+  --primary-moderate-blue: hsl(238, 40%, 52%);
+  --primary-soft-red: hsl(358, 79%, 66%);
+  --primary-light-grayish-blue: hsl(239, 57%, 85%);
+  --primary-pale-red: hsl(357, 100%, 86%);
+
+  --neutral-dark-blue: #324152;
+  --neutral-grayish-blue: #67727e;
+  --neutral-light-gray: #eaecf1;
+  --neutral-very-light-gray: #f5f6fa;
+}
+
+.main-header {
+  font-family: 'NunitoSansBold';
+  font-size: 24px;
+}
+
+.button {
+  font-family: 'NunitoSansMedium';
+  font-size: 14px;
+}
+
+.title {
+  font-family: 'NunitoSansBold';
+  font-size: 16px;
+}
+
+.label {
+  font-family: 'NunitoSansMedium';
+  font-size: 14px;
+}
+
+.value {
+  font-family: 'NunitoSansRegular';
+  font-size: 14px;
+}
+
+.text-dark {
+  color: var(--neutral-dark-blue);
+}
+
+/* .text-dark::placeholder {
+  color: var(--neutral-dark-blue);
+} */
+
+.text-light {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-light::placeholder {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-dark {
+  background-color: var(--neutral-grayish-blue);
+}
+
+.bg-light-gray {
+  background-color: var(--neutral-very-light-gray)
+}
+
+.bg-very-dark {
+  background-color: var(--neutral-dark-blue);
+}
+
+.bg-light {
+  background-color: white;
+}
+
+.App {}
+
+.main {
+  /* min-width: 100vw;
+  min-height: 100vh; */
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
 }

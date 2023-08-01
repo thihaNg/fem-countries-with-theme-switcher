@@ -1,25 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Theme, ThemeProvider, useGetStyles, useTheme } from './components/ThemeProvider';
+import Header from './components/header/Header';
+import SearchInput from './components/elements/search-input/SearchInput';
+import CountriesPage from './components/pages/countries/CountriesPage';
+import { Country } from './models/Country';
+import CountryDetailPage from './components/pages/country-detail/CountryDetailPage';
 
 function App() {
+
+  const [selectedCountry, setSelectedCountry] = useState<Country | null>(null)
+
+  const handleCountrySelect = (country: Country) => {
+
+    setSelectedCountry(country)
+
+  }
+
+  const handleDetailBackClick = () => {
+    setSelectedCountry(null)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div>
+        <Header />
+        <div
+          className='main'>
+          {
+            !selectedCountry &&
+            <CountriesPage
+              onCountrySelect={handleCountrySelect} />
+          }
+          {
+            selectedCountry &&
+            <CountryDetailPage
+              onBackClick={handleDetailBackClick}
+              country={selectedCountry} />
+          }
+        </div>
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 400px;
+  width: 100%;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px 0px rgba(161, 166, 171, 0.65);
+  padding-left: 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container > input {
+  flex-grow: 1;
+  font-family: 'NunitoSansRegular';
+  font-size: medium;
+  height: 48px;
+  margin-left: 24px;
+  outline: none;
+  border: none;
+}
+
+/* @media(max-width: 400px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+} */

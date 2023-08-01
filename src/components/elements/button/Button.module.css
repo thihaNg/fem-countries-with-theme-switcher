@@ -1,0 +1,16 @@
+.container {
+  box-shadow: 2px 2px 3px 0px rgba(161, 166, 171, 0.65);
+  border-radius: 2px;
+  padding: 12px 24px;
+  max-width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container:hover {
+  box-shadow: none;
+}
+
+.container:active {
+  box-shadow: 2px 2px 3px 0px rgba(161, 166, 171, 0.65);
+}

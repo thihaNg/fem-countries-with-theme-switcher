@@ -1,0 +1,44 @@
+.container {
+  width: 200px;
+  height: 48px;
+  box-shadow: 2px 2px 3px 0px rgba(161, 166, 171, 0.65);
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 0px 16px;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+}
+
+.options-container {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: -16px;
+  z-index: 200;
+  width: 200px;
+  /* height: 150px; */
+  box-shadow: 2px 2px 3px 0px rgba(161, 166, 171, 0.65);
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}

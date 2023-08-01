@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 2px 2px 3px 0px rgba(161, 166, 171, 0.65);
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container:hover {
+  box-shadow: none;
+}
+
+.container:active {
+  box-shadow: 2px 2px 3px 0px rgba(161, 166, 171, 0.65);
+}
+
+.container > img {
+  width: 100%;
+  height: 200px;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
